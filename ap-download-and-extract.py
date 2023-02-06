@@ -28,7 +28,6 @@ cd TEMP
 for f in bayesian_inference_fbm POPC_martini_nvt_cm_300ps POPC_martini_nvt_cm_600ns; do
     aptool -p ../$f.ap ls > ../ap-extract-logs/$f.log 2>&1
     aptool -p ../$f.ap checkout >> ../ap-extract-logs/$f.log 2>&1
-    rm -rf data
     python3 ../aptool-dump.py ../$f.ap . >> ../ap-extract-logs/$f.log 2>&1
 done
 mv -f data/* ../data
