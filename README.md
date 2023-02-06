@@ -17,7 +17,9 @@ See the ActivePapers for more information:
 - https://zenodo.org/record/61743
 
 
-Instructions:
+# Instructions
+
+## ActivePapers download and extraction
 
 - Create ActivePapers environment with:
 `mamba env create --file active-papers.yaml`
@@ -35,3 +37,9 @@ This will generate the following directories:
 - code-ORIGINAL: the original ActivePaper code (calclets and modules)
 
 Note that this repo contains a tag "initial" where code-ORIGINAL/ was copied to code/ . Note that all subsequent commits modify this code in order to port it to Seamless. Therefore, you can always do `git diff initial [files]` in order to see the code modification.
+
+## Initial population of the Seamless database
+
+This requires Seamless to be installed in the default manner, with the `seamless` conda environment activated (`conda activate seamless`)
+
+Run `seamless-populate-db.sh` . This will destroy the current Seamless database dir (if any), create a new one, and populate it with the contents of `data/`. Hard links are used, so no extra disk space will be used.
