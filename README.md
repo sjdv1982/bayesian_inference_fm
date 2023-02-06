@@ -4,6 +4,17 @@ Porting of:
 
 from an ActivePaper to a Seamless workflow.
 
+Author: Sjoerd de Vries, except for the code/ subdirectory.
+Copyright: 2023, CNRS, except for the code/ subdirectory.
+License: MIT license, except for the code/ subdirectory.
+
+To the code/ subdirectory, the original license of the ActivePapers applies. This license is Creative Commons Attribution 4.0 International.
+See the ActivePapers for more information:
+- https://zenodo.org/record/162171
+- https://zenodo.org/record/61742
+- https://zenodo.org/record/61743
+
+
 Instructions:
 
 - Create ActivePapers environment with:
