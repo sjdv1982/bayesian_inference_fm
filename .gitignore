@@ -1,0 +1,7 @@
+*.pyc
+*.ap
+data/*
+code-ORIGINAL/*
+documentation-ORIGINAL/*
+ap-extract-logs/*
+TEMP/*

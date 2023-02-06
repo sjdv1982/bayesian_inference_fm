@@ -1,0 +1,13 @@
+name: active-papers
+channels:
+  - conda-forge
+dependencies:
+  - python=3.5
+  - pip
+  - h5py=2.6
+  - pip:
+    - numpy>=1.6
+    - tempdir>=0.6
+    - matplotlib
+    - ActivePapers.Py
+    - requests # for remote download of the active papers in this project
