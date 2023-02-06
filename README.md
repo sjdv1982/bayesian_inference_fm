@@ -5,7 +5,9 @@ Porting of:
 from an ActivePaper to a Seamless workflow.
 
 Author: Sjoerd de Vries, except for the code/ subdirectory.
+
 Copyright: 2023, CNRS, except for the code/ subdirectory.
+
 License: MIT license, except for the code/ subdirectory.
 
 To the code/ subdirectory, the original license of the ActivePapers applies. This license is Creative Commons Attribution 4.0 International.
@@ -21,6 +23,7 @@ Instructions:
 `mamba env create --file active-papers.yaml`
 
 - Download and extract Bayesian Inference ActivePaper:
+
 ```bash
 conda activate active-papers
 python3 ap-download-and-extract.py
