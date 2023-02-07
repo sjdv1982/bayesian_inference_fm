@@ -43,3 +43,12 @@ Note that this repo contains a tag "initial" where code-ORIGINAL/ was copied to 
 This requires Seamless to be installed in the default manner, with the `seamless` conda environment activated (`conda activate seamless`)
 
 Run `seamless-populate-db.sh` . This will destroy the current Seamless database dir (if any), create a new one, and populate it with the contents of `data/`. Hard links are used, so no extra disk space will be used.
+
+## Build the Seamless workflow
+
+Seamless workflows can be modified interactively and stored as data.
+The modification code does not need to be stored.
+However, for ease of demonstration, the workflow is here being built from code instead of simply loaded from the .seamless file.
+
+NOTE: the code to build/modify the workflow is not necessarily reproducible.
+However, the workflow that is being built (`bayesian_inference.seamless`) is reproducible.
