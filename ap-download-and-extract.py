@@ -38,7 +38,7 @@ python3 ../aptool-dump.py ../$f.ap . >> ../ap-extract-logs/$f.log 2>&1
 rm -rf data/short_time_trajectory.npy
 mv data/POPC_martini_nvt data/short_time_trajectory
 
-f=POPC_martini_nvt_cm_300ps
+f=POPC_martini_nvt_cm_600ns
 python3 ../aptool-dump.py ../$f.ap . >> ../ap-extract-logs/$f.log 2>&1
 rm -rf data/long_time_trajectory.npy
 mv data/POPC_martini_nvt data/long_time_trajectory
