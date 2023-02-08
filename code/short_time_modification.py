@@ -2,29 +2,16 @@
 
 # ### Prelude
 
-# Make matplotlib produce PDF files for figures
-
-import matplotlib
-matplotlib.use('PDF')
-del matplotlib
+import numpy as np
+from io import StringIO, BytesIO
 
 # Import common scientific libraries
 
 import matplotlib.pyplot as plt
-from activepapers.contents import data, open_documentation
 
 # Import modules from this ActivePaper
 
-from fbm import sigma_p, mod_sigma_p, sigma_i, mod_sigma_i
-
-# Use the global parameters
-
-parameters = data['parameters']
-alpha_in = parameters['alpha_in'][...]
-alpha_grid = parameters['alpha_grid'][...]
-trajectory_lengths = parameters['trajectory_lengths'][...]
-n_traj_convergence = int(parameters['n_traj_convergence'][...])
-n_traj_ml_estimate = int(parameters['n_traj_ml_estimate'][...])
+from .fbm import sigma_p, mod_sigma_p, sigma_i, mod_sigma_i
 
 # ### Illustration of the short-time behavior and its impact on
 #     parameter inference with the plain fBM model
@@ -73,24 +60,27 @@ axes[1].set_ylabel(r"$<X^2(t)> / (D \cdot \delta t^\alpha)$",
 # With an increasing sampling time step, the estimate for
 # $\alpha$ converges to the known input value `alpha_in`.
 
-from gaussian_processes import make_trajectories
-from fbm import sigma_p, mod_sigma_p, subsample_sigma
-from inference import merge_grids, max_lh_estimate, plot_convergence
+from .gaussian_processes import make_trajectories
+from .fbm import sigma_p, mod_sigma_p, subsample_sigma
+from .inference import merge_grids, max_lh_estimate, plot_convergence
 
 l = trajectory_lengths[-1]
 ss = [1, 2, 3, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 
+result = {}
+
 sigma_big = mod_sigma_p(alpha_in)(max(ss)*l)
 alphas = []
 fname = 'short_time_modification/subsampling_convergence_l=%d.txt' % l
-with open_documentation(fname, 'w') as log:
-    log.write("  s, alpha\n")
-    for s in ss:
-        sigma = subsample_sigma(sigma_big[:s*l, :s*l], s)
-        t = make_trajectories(sigma, n_traj_ml_estimate)
-        assert t.shape[1] == l
-        alphas.append(max_lh_estimate(t, sigma_p, alpha_grid))
-        log.write("%3d, %f\n" % (s, alphas[-1]))
+log = StringIO()
+log.write("  s, alpha\n")
+for s in ss:
+    sigma = subsample_sigma(sigma_big[:s*l, :s*l], s)
+    t = make_trajectories(sigma, n_traj_ml_estimate)
+    assert t.shape[1] == l
+    alphas.append(max_lh_estimate(t, sigma_p, alpha_grid))
+    log.write("%3d, %f\n" % (s, alphas[-1]))
+result[fname] = log.getvalue()
 
 # Plot the $\alpha$ values.
 
@@ -104,9 +94,12 @@ axes[2].set_ylabel(r"$\alpha_{ML}$", fontsize=alfs)
 
 # Combine the three plots into one figure.
 
-plt.savefig(open_documentation('short_time_modification/overview.pdf', 'w'))
+png = BytesIO()
+plt.savefig(png)
+# result['short_time_modification/overview.png'] = png.getvalue() # bug in Seamless
+result['short_time_modification/overview.png'] = np.array(png.getvalue()) # workaround
 
-#@image short_time_modification/overview.pdf
+#@image short_time_modification/overview.png
 
 # ### Convergence of the inference process
 
@@ -121,9 +114,12 @@ for s in [1, 10]:
     plot_convergence(trs, sigma_p, alpha_grid, r"$\alpha$", alpha_in)
     plt.suptitle(r"fBM with modified short-time behavior, $L = %d$, $s = %d$" % (l, s),
                  fontsize=20)
-    fname = 'short_time_modification/convergence_mod_fbm_s=%d.pdf' % s
-    plt.savefig(open_documentation(fname, 'w'))
+    fname = 'short_time_modification/convergence_mod_fbm_s=%d.png' % s
+    png = BytesIO()
+    plt.savefig(png)
+    #result[fname] = png.getvalue() # bug in Seamless
+    result[fname] = np.array(png.getvalue()) # workaround
 
-#@image short_time_modification/convergence_mod_fbm_s=1.pdf
+#@image short_time_modification/convergence_mod_fbm_s=1.png
 
-#@image short_time_modification/convergence_mod_fbm_s=10.pdf
+#@image short_time_modification/convergence_mod_fbm_s=10.png

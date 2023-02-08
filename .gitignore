@@ -6,4 +6,5 @@ documentation-ORIGINAL/*
 ap-extract-logs/*
 TEMP/*
 seamless-db/*
+results/*
 data-checksums.list
