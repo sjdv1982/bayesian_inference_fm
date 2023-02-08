@@ -31,11 +31,13 @@ conda activate active-papers
 python3 ap-download-and-extract.py
 ```
 
-This will generate the following directories:
+This will download about 1 GB of data. Download is skipped if the corresponding .ap file already exists. You may download these yourself from Zenodo.
 
-- data: containing the ActivePaper datasets in .npy format
-- documentation-ORIGINAL: the original ActivePaper documentation
-- code-ORIGINAL: the original ActivePaper code (calclets and modules)
+The script will generate the following directories:
+
+- `data/`: containing the ActivePaper datasets in .npy format
+- `documentation-ORIGINAL/`: the original ActivePaper documentation
+- `code-ORIGINAL/`: the original ActivePaper code (calclets and modules)
 
 Note that this Git repo contains a tag "initial" where code-ORIGINAL/ was copied to code/ . Subsequent Git commits modify this code in order to port it to Seamless. Therefore, you can do `git diff initial [files]` in order to see the code modification.
 

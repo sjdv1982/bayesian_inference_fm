@@ -6,7 +6,9 @@ set -u -e
 rm -rf seamless-db
 mkdir seamless-db
 seamless-database seamless-db
-sleep 3
+sleep 10
+docker logs seamless-database-container
+sleep 10
 docker stop seamless-database-container
 docker rm seamless-database-container
 rm -f data-checksums.list
