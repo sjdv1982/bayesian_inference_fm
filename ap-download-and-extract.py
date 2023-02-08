@@ -30,9 +30,19 @@ for f in bayesian_inference_fbm POPC_martini_nvt_cm_300ps POPC_martini_nvt_cm_60
     aptool -p ../$f.ap checkout >> ../ap-extract-logs/$f.log 2>&1
 done
 rm -rf data
-for f in bayesian_inference_fbm POPC_martini_nvt_cm_300ps POPC_martini_nvt_cm_600ns; do    
-    python3 ../aptool-dump.py ../$f.ap . >> ../ap-extract-logs/$f.log 2>&1
-done
+f=bayesian_inference_fbm
+python3 ../aptool-dump.py ../$f.ap . >> ../ap-extract-logs/$f.log 2>&1
+
+f=POPC_martini_nvt_cm_300ps
+python3 ../aptool-dump.py ../$f.ap . >> ../ap-extract-logs/$f.log 2>&1
+rm -rf data/short_time_trajectory.npy
+mv data/POPC_martini_nvt data/short_time_trajectory
+
+f=POPC_martini_nvt_cm_300ps
+python3 ../aptool-dump.py ../$f.ap . >> ../ap-extract-logs/$f.log 2>&1
+rm -rf data/long_time_trajectory.npy
+mv data/POPC_martini_nvt data/long_time_trajectory
+
 mv -f data/* ../data
 mv -f code/* ../code-ORIGINAL
 mv -f documentation/* ../documentation-ORIGINAL

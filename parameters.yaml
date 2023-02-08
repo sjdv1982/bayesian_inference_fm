@@ -1,0 +1,63 @@
+# Simple parameters that can be changed by the user, without any programming
+
+
+# The lipid trajectories have $\alpha \approx 0.6$, so we use this
+# value for exploring the convergence of the inference scheme.
+
+alpha_in: 0.6
+
+# We use two different trajectory lengths to illustrate its impact on
+# the inference process.
+
+trajectory_lengths: [10, 100]
+
+# For the convergence plots, we use 1000 trajectories. For
+# maximum-likelihood estimates, 500 trajectories are sufficient.
+
+n_traj_convergence: 1000
+n_traj_ml_estimate: 500
+
+lipid_analysis:
+  - 
+    l: 10
+    t_max: 100000.
+    convergence_timesteps:
+      short_time:  [20, 50, 200, 500]
+      long_time: [1, 50, 500, 2000]
+
+    sampling_step_size:
+      short_time:  [1, 2, 5, 10, 20, 50, 100, 200, 500, 1000]
+      long_time: [1, 2, 5, 10, 20, 50, 100, 200, 500, 1000, 2000, 3000]
+  - 
+    l: 50
+    t_max: 10000.
+    convergence_timesteps:
+      short_time:  [20, 50]
+      long_time: [1, 50, 100]
+
+    sampling_step_size:
+      short_time:  [1, 2, 5, 10, 20, 50, 100, 200]
+      long_time: [1, 2, 5, 10, 20, 50, 100, 200, 500]
+
+  - 
+    l: 100
+    t_max: 10000.
+    convergence_timesteps:
+      short_time:  [20, 50]
+      long_time: [1, 50, 200]
+
+    sampling_step_size:
+      short_time:  [1, 2, 5, 10, 20, 50, 100]
+      long_time: [1, 2, 5, 10, 20, 50, 100, 200, 300]
+
+  - 
+    l: 200
+    t_max: 10000.
+
+    convergence_timesteps:
+      short_time:  [10, 20]
+      long_time: [1, 20, 100]
+
+    sampling_step_size:
+      short_time:  [1, 2, 5, 10, 20, 50]
+      long_time: [1, 2, 5, 10, 20, 50, 100]
