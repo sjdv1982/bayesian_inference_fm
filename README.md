@@ -13,6 +13,7 @@ from an ActivePaper to a Seamless workflow.
 The `code/` subdirectory contains the original code from the ActivePapers with (generally light) modifications. The original license of the ActivePapers applies. This license is Creative Commons Attribution 4.0 International.
 
 See the ActivePapers for more information:
+
 - https://zenodo.org/record/162171
 - https://zenodo.org/record/61742
 - https://zenodo.org/record/61743
@@ -53,6 +54,7 @@ The database archive contains all workflow transformations and their results.
 If you extract this archive, the workflow will retrieve all results from cache and not recompute anything.
 
 NOTE: this should be done while the Seamless database is not running. To stop the database, do:
+
 ```bash
 docker stop seamless-database-container
 docker rm seamless-database-container
@@ -60,7 +62,7 @@ docker rm seamless-database-container
 
 Then, you can extract the archive as follows:
 
-`tar xvzf seamless-db.tgz` 
+`tar xvzf seamless-db.tgz`
 
 ## Build the Seamless workflow
 
@@ -106,25 +108,26 @@ docker rm seamless-database-container
 The Seamless workflow is self-contained in `bayesian_inference_fbm.seamless`. With the checksum buffers (and computation results) provided by the database, the workflow can be re-loaded as follows:
 
 ```bash
+## If necessary:
+# conda activate seamless
+# seamless-database seamless-db
+
 seamless-serve-graph-interactive bayesian_inference_fbm.seamless \
-    --database --mounts \
-    --ncores 1
+      --database --mounts \
+      --ncores 1
 ```
 
-As before, you can modify the graph interactively, either from IPython, or from the mounted files. all dependencies are launched in parallel. 
+As before, you can modify the graph interactively, either from IPython, or from the mounted files. all dependencies are launched in parallel.
 
 You can force Seamless to execute only one transformer at a time by specifying `--ncores 1`. This may no longer be necessary in future Seamless versions.
 
 ### Adding a status visualization graph
 
 ```bash
-seamless-serve-graph-interactive bayesian_inference_fbm.seamless \
-    --database --mounts \
-    --status-graph /home/jovyan/software/seamless/graphs/status-visualization.seamless \
-    --add-zip /home/jovyan/software/seamless/graphs/status-visualization.zip \
-    --ncores 1
-``` 
+seamless-serve-graph-interactive bayesian_inference_fbm.seamless --database --mounts \
+      --status-graph /home/jovyan/software/seamless/graphs/status-visualization.seamless \
+      --add-zip /home/jovyan/software/seamless/graphs/status-visualization.zip \
+      --ncores 1
+```
 
 In that case, open http://localhost:5813/status/index.html
-
-
