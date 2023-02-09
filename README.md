@@ -25,7 +25,7 @@ See the ActivePapers for more information:
 - Create ActivePapers environment with:
 `mamba env create --file active-papers.yaml`
 
-- Download and extract Bayesian Inference ActivePaper:
+- Download and extract Bayesian Inference and trajectory ActivePapers:
 
 ```bash
 conda activate active-papers
