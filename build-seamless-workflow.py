@@ -182,14 +182,16 @@ ctx.long_time_trajectory_positions = ctx.data["data/long_time_trajectory/particl
 #   runs in ~2h on a laptop
 #
 # lipid analysis, l=100
-#   runs in ~??? mins on a laptop
+#   DISABLED: runs in >7h on a laptop
 #
 # lipid analysis, l=200
-#   runs in ~??? mins on a laptop
+#   DISABLED
 #
 #########################################################
 
-for analysis_index, l in enumerate([10, 50, 100, 200]):
+# By default, only l=10 and l=50 are run because of CPU time
+# Remove the [:2] in the next line to enable them.
+for analysis_index, l in enumerate([10, 50, 100, 200][:2]):
     attr = "lipid_analysis_l_{}".format(l)
     tf = ctx.transformers[attr] = Transformer()
     tf.code = ctx.code.lipid_analysis
@@ -225,4 +227,4 @@ for analysis_index, l in enumerate([10, 50, 100, 200]):
     ctx.results[attr].mount(result_dir, "w")
     ctx.translate()
 
-ctx.save_graph("bayesian_interference.seamless")
+ctx.save_graph("bayesian_inference_fbm.seamless")

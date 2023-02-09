@@ -1,0 +1,1172 @@
+{
+  "__seamless__": "0.8",
+  "connections": [
+    {
+      "source": [
+        "parameters"
+      ],
+      "target": [
+        "parameters2"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "parameters2"
+      ],
+      "target": [
+        "parameters3"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "code",
+        "make_alphagrid"
+      ],
+      "target": [
+        "transformers",
+        "make_alphagrid",
+        "code"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "modules",
+        "inference"
+      ],
+      "target": [
+        "transformers",
+        "make_alphagrid",
+        "inference"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "parameters3",
+        "alpha_in"
+      ],
+      "target": [
+        "transformers",
+        "make_alphagrid",
+        "alpha_in"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "transformers",
+        "make_alphagrid"
+      ],
+      "target": [
+        "alpha_grid"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "code",
+        "inference_convergence"
+      ],
+      "target": [
+        "transformers",
+        "inference_convergence",
+        "code"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "modules",
+        "inference"
+      ],
+      "target": [
+        "transformers",
+        "inference_convergence",
+        "inference"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "modules",
+        "gaussian_processes"
+      ],
+      "target": [
+        "transformers",
+        "inference_convergence",
+        "gaussian_processes"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "modules",
+        "reproducible_random_numbers"
+      ],
+      "target": [
+        "transformers",
+        "inference_convergence",
+        "reproducible_random_numbers"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "modules",
+        "fbm"
+      ],
+      "target": [
+        "transformers",
+        "inference_convergence",
+        "fbm"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "parameters3",
+        "alpha_in"
+      ],
+      "target": [
+        "transformers",
+        "inference_convergence",
+        "alpha_in"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "alpha_grid"
+      ],
+      "target": [
+        "transformers",
+        "inference_convergence",
+        "alpha_grid"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "parameters3",
+        "trajectory_lengths"
+      ],
+      "target": [
+        "transformers",
+        "inference_convergence",
+        "trajectory_lengths"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "parameters3",
+        "n_traj_convergence"
+      ],
+      "target": [
+        "transformers",
+        "inference_convergence",
+        "n_traj_convergence"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "transformers",
+        "inference_convergence"
+      ],
+      "target": [
+        "results",
+        "inference_convergence"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "code",
+        "short_time_modification"
+      ],
+      "target": [
+        "transformers",
+        "short_time_modification",
+        "code"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "modules",
+        "fbm"
+      ],
+      "target": [
+        "transformers",
+        "short_time_modification",
+        "fbm"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "modules",
+        "inference"
+      ],
+      "target": [
+        "transformers",
+        "short_time_modification",
+        "inference"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "modules",
+        "gaussian_processes"
+      ],
+      "target": [
+        "transformers",
+        "short_time_modification",
+        "gaussian_processes"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "modules",
+        "reproducible_random_numbers"
+      ],
+      "target": [
+        "transformers",
+        "short_time_modification",
+        "reproducible_random_numbers"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "parameters3",
+        "alpha_in"
+      ],
+      "target": [
+        "transformers",
+        "short_time_modification",
+        "alpha_in"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "alpha_grid"
+      ],
+      "target": [
+        "transformers",
+        "short_time_modification",
+        "alpha_grid"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "parameters3",
+        "trajectory_lengths"
+      ],
+      "target": [
+        "transformers",
+        "short_time_modification",
+        "trajectory_lengths"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "parameters3",
+        "n_traj_convergence"
+      ],
+      "target": [
+        "transformers",
+        "short_time_modification",
+        "n_traj_convergence"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "parameters3",
+        "n_traj_ml_estimate"
+      ],
+      "target": [
+        "transformers",
+        "short_time_modification",
+        "n_traj_ml_estimate"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "transformers",
+        "short_time_modification"
+      ],
+      "target": [
+        "results",
+        "short_time_modification"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "data",
+        "data/short_time_trajectory/particles/universe/position/time.npy"
+      ],
+      "target": [
+        "short_time_trajectory_times"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "data",
+        "data/short_time_trajectory/particles/universe/position/value.npy"
+      ],
+      "target": [
+        "short_time_trajectory_positions"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "data",
+        "data/long_time_trajectory/particles/universe/position/time.npy"
+      ],
+      "target": [
+        "long_time_trajectory_times"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "data",
+        "data/long_time_trajectory/particles/universe/position/value.npy"
+      ],
+      "target": [
+        "long_time_trajectory_positions"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "code",
+        "lipid_analysis"
+      ],
+      "target": [
+        "transformers",
+        "lipid_analysis_l_10",
+        "code"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "modules",
+        "fbm"
+      ],
+      "target": [
+        "transformers",
+        "lipid_analysis_l_10",
+        "fbm"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "modules",
+        "inference"
+      ],
+      "target": [
+        "transformers",
+        "lipid_analysis_l_10",
+        "inference"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "parameters3",
+        "lipid_analysis",
+        0
+      ],
+      "target": [
+        "transformers",
+        "lipid_analysis_l_10",
+        "lipid_analysis_parameters"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "short_time_trajectory_times"
+      ],
+      "target": [
+        "transformers",
+        "lipid_analysis_l_10",
+        "short_time_trajectory_times"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "short_time_trajectory_positions"
+      ],
+      "target": [
+        "transformers",
+        "lipid_analysis_l_10",
+        "short_time_trajectory_positions"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "long_time_trajectory_times"
+      ],
+      "target": [
+        "transformers",
+        "lipid_analysis_l_10",
+        "long_time_trajectory_times"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "long_time_trajectory_positions"
+      ],
+      "target": [
+        "transformers",
+        "lipid_analysis_l_10",
+        "long_time_trajectory_positions"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "transformers",
+        "lipid_analysis_l_10"
+      ],
+      "target": [
+        "results",
+        "lipid_analysis_l_10"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "code",
+        "lipid_analysis"
+      ],
+      "target": [
+        "transformers",
+        "lipid_analysis_l_50",
+        "code"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "modules",
+        "fbm"
+      ],
+      "target": [
+        "transformers",
+        "lipid_analysis_l_50",
+        "fbm"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "modules",
+        "inference"
+      ],
+      "target": [
+        "transformers",
+        "lipid_analysis_l_50",
+        "inference"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "parameters3",
+        "lipid_analysis",
+        1
+      ],
+      "target": [
+        "transformers",
+        "lipid_analysis_l_50",
+        "lipid_analysis_parameters"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "short_time_trajectory_times"
+      ],
+      "target": [
+        "transformers",
+        "lipid_analysis_l_50",
+        "short_time_trajectory_times"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "short_time_trajectory_positions"
+      ],
+      "target": [
+        "transformers",
+        "lipid_analysis_l_50",
+        "short_time_trajectory_positions"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "long_time_trajectory_times"
+      ],
+      "target": [
+        "transformers",
+        "lipid_analysis_l_50",
+        "long_time_trajectory_times"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "long_time_trajectory_positions"
+      ],
+      "target": [
+        "transformers",
+        "lipid_analysis_l_50",
+        "long_time_trajectory_positions"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "transformers",
+        "lipid_analysis_l_50"
+      ],
+      "target": [
+        "results",
+        "lipid_analysis_l_50"
+      ],
+      "type": "connection"
+    }
+  ],
+  "lib": [],
+  "nodes": [
+    {
+      "celltype": "binary",
+      "checksum": {
+        "value": "b82527b353be89fd75a7c7d3eda22dfb00191e98cc968e8c51a2b6902bbb3865"
+      },
+      "datatype": "mixed",
+      "path": [
+        "alpha_grid"
+      ],
+      "type": "cell"
+    },
+    {
+      "path": [
+        "code"
+      ],
+      "type": "context"
+    },
+    {
+      "celltype": "code",
+      "checksum": {
+        "value": "752d59952677a53c882f68e833b0b49ea41762f4d172e11d6aff9118735eb500"
+      },
+      "datatype": "mixed",
+      "language": "python",
+      "mount": {
+        "authority": "file",
+        "mode": "rw",
+        "path": "code/inference_convergence.py",
+        "persistent": true
+      },
+      "path": [
+        "code",
+        "inference_convergence"
+      ],
+      "type": "cell"
+    },
+    {
+      "celltype": "code",
+      "checksum": {
+        "value": "f2d3baa229fd67b4237e51c263744d728ab73160408fddb83558bc3cac1812b5"
+      },
+      "datatype": "mixed",
+      "language": "python",
+      "mount": {
+        "authority": "file",
+        "mode": "rw",
+        "path": "code/lipid_analysis.py",
+        "persistent": true
+      },
+      "path": [
+        "code",
+        "lipid_analysis"
+      ],
+      "type": "cell"
+    },
+    {
+      "celltype": "code",
+      "checksum": {
+        "value": "43890253f55d6820eb4ceb1eeead247878e2903800f3ce4cee15145241e88553"
+      },
+      "datatype": "mixed",
+      "language": "python",
+      "mount": {
+        "authority": "file",
+        "mode": "rw",
+        "path": "code/make_alphagrid.py",
+        "persistent": true
+      },
+      "path": [
+        "code",
+        "make_alphagrid"
+      ],
+      "type": "cell"
+    },
+    {
+      "celltype": "code",
+      "checksum": {
+        "value": "47b40e8ebf094bc6aabc0fce390748b70e06c8bdd83823ef3557886a3507733e"
+      },
+      "datatype": "mixed",
+      "language": "python",
+      "mount": {
+        "authority": "file",
+        "mode": "rw",
+        "path": "code/short_time_modification.py",
+        "persistent": true
+      },
+      "path": [
+        "code",
+        "short_time_modification"
+      ],
+      "type": "cell"
+    },
+    {
+      "checksum": {
+        "filtered": "6e9b2ba4aa862c6aa7962ad9e8324412cdb30c1671678bd25dd086bd5da06aba",
+        "keyorder": "7b41ad4a50b29158e075c6463133761266adb475130b8e886f2f5649070031cf",
+        "origin": "6e9b2ba4aa862c6aa7962ad9e8324412cdb30c1671678bd25dd086bd5da06aba"
+      },
+      "path": [
+        "data"
+      ],
+      "type": "deepfoldercell"
+    },
+    {
+      "celltype": "structured",
+      "checksum": {
+        "schema": "d0a1b2af1705c1b8495b00145082ef7470384e62ac1c4d9b9cdbbe0476c28f8c",
+        "value": "23c2c3f17368c7a16e8c2b4dcb9097b4054104465895766c88361c73cb92577a"
+      },
+      "datatype": "mixed",
+      "hash_pattern": null,
+      "path": [
+        "long_time_trajectory_positions"
+      ],
+      "type": "cell"
+    },
+    {
+      "celltype": "structured",
+      "checksum": {
+        "schema": "d0a1b2af1705c1b8495b00145082ef7470384e62ac1c4d9b9cdbbe0476c28f8c",
+        "value": "2ef0e3a4f0408c7f38674bf726e4c3c5acef59e91db68d398baee5c1b488a9d0"
+      },
+      "datatype": "mixed",
+      "hash_pattern": null,
+      "path": [
+        "long_time_trajectory_times"
+      ],
+      "type": "cell"
+    },
+    {
+      "path": [
+        "modules"
+      ],
+      "type": "context"
+    },
+    {
+      "checksum": "44bb33d6abb9f02f4b23c290b083b99b7993c83421d2a73a33540968ac253c84",
+      "dependencies": [],
+      "language": "python",
+      "module_type": "interpreted",
+      "mount": {
+        "authority": "file",
+        "mode": "rw",
+        "path": "code/python-packages/fbm.py",
+        "persistent": true
+      },
+      "path": [
+        "modules",
+        "fbm"
+      ],
+      "type": "module"
+    },
+    {
+      "checksum": "5b8af1e5f33c9c97bf464aaab342381c62a3160a7fb104c4ec41eaae86720855",
+      "dependencies": [],
+      "language": "python",
+      "module_type": "interpreted",
+      "mount": {
+        "authority": "file",
+        "mode": "rw",
+        "path": "code/python-packages/gaussian_processes.py",
+        "persistent": true
+      },
+      "path": [
+        "modules",
+        "gaussian_processes"
+      ],
+      "type": "module"
+    },
+    {
+      "checksum": "58a65ee529d91649784f1c0942bca35f603b8936559815c53a601fa145109dd8",
+      "dependencies": [],
+      "language": "python",
+      "module_type": "interpreted",
+      "mount": {
+        "authority": "file",
+        "mode": "rw",
+        "path": "code/python-packages/inference.py",
+        "persistent": true
+      },
+      "path": [
+        "modules",
+        "inference"
+      ],
+      "type": "module"
+    },
+    {
+      "checksum": "053eeca49448d782f6daaaf6a39462b18e5e4fbee35b6834e20abe30be7409bb",
+      "dependencies": [],
+      "language": "python",
+      "module_type": "interpreted",
+      "mount": {
+        "authority": "file",
+        "mode": "rw",
+        "path": "code/python-packages/reproducible_random_numbers.py",
+        "persistent": true
+      },
+      "path": [
+        "modules",
+        "reproducible_random_numbers"
+      ],
+      "type": "module"
+    },
+    {
+      "celltype": "yaml",
+      "checksum": {
+        "value": "80bcc21b5fe0d879adb18aa96df50b61b3b955d077a143697ce192c61f6f7603"
+      },
+      "datatype": "mixed",
+      "mount": {
+        "authority": "file",
+        "mode": "rw",
+        "path": "parameters.yaml",
+        "persistent": true
+      },
+      "path": [
+        "parameters"
+      ],
+      "type": "cell"
+    },
+    {
+      "celltype": "plain",
+      "checksum": {
+        "value": "5a4bdb6b4067e9c197b1431fc28c5efc73b840b99c116a54c10016d1c9654435"
+      },
+      "datatype": "mixed",
+      "path": [
+        "parameters2"
+      ],
+      "type": "cell"
+    },
+    {
+      "celltype": "structured",
+      "checksum": {
+        "buffer": "5a4bdb6b4067e9c197b1431fc28c5efc73b840b99c116a54c10016d1c9654435",
+        "schema": "d0a1b2af1705c1b8495b00145082ef7470384e62ac1c4d9b9cdbbe0476c28f8c",
+        "value": "5a4bdb6b4067e9c197b1431fc28c5efc73b840b99c116a54c10016d1c9654435"
+      },
+      "datatype": "mixed",
+      "hash_pattern": null,
+      "path": [
+        "parameters3"
+      ],
+      "type": "cell"
+    },
+    {
+      "path": [
+        "results"
+      ],
+      "type": "context"
+    },
+    {
+      "celltype": "structured",
+      "checksum": {
+        "schema": "d0a1b2af1705c1b8495b00145082ef7470384e62ac1c4d9b9cdbbe0476c28f8c",
+        "value": "8234b3f966702660f068543b7cce3b5a825baf5db0297056ae11c385655795cb"
+      },
+      "mount": {
+        "authority": "cell",
+        "mode": "w",
+        "path": "results/inference_convergence",
+        "persistent": true
+      },
+      "path": [
+        "results",
+        "inference_convergence"
+      ],
+      "type": "foldercell"
+    },
+    {
+      "celltype": "structured",
+      "checksum": {
+        "schema": "d0a1b2af1705c1b8495b00145082ef7470384e62ac1c4d9b9cdbbe0476c28f8c",
+        "value": "d8f01b2deeb4945bc606c83c323fc79a481016b55b42e540dc521dbac38603ef"
+      },
+      "mount": {
+        "authority": "cell",
+        "mode": "w",
+        "path": "results/lipid_analysis_l_10",
+        "persistent": true
+      },
+      "path": [
+        "results",
+        "lipid_analysis_l_10"
+      ],
+      "type": "foldercell"
+    },
+    {
+      "celltype": "structured",
+      "mount": {
+        "authority": "cell",
+        "mode": "w",
+        "path": "results/lipid_analysis_l_50",
+        "persistent": true
+      },
+      "path": [
+        "results",
+        "lipid_analysis_l_50"
+      ],
+      "type": "foldercell"
+    },
+    {
+      "celltype": "structured",
+      "checksum": {
+        "schema": "d0a1b2af1705c1b8495b00145082ef7470384e62ac1c4d9b9cdbbe0476c28f8c",
+        "value": "d1111cc639401c1d1c221f0761e7d82be7ff22d7bff289051681259f2673e296"
+      },
+      "mount": {
+        "authority": "cell",
+        "mode": "w",
+        "path": "results/short_time_modification",
+        "persistent": true
+      },
+      "path": [
+        "results",
+        "short_time_modification"
+      ],
+      "type": "foldercell"
+    },
+    {
+      "celltype": "structured",
+      "checksum": {
+        "schema": "d0a1b2af1705c1b8495b00145082ef7470384e62ac1c4d9b9cdbbe0476c28f8c",
+        "value": "251a0c9db42a911b420f607560d469430d0f58b00c507e574949bf0ac69d7fb8"
+      },
+      "datatype": "mixed",
+      "hash_pattern": null,
+      "path": [
+        "short_time_trajectory_positions"
+      ],
+      "type": "cell"
+    },
+    {
+      "celltype": "structured",
+      "checksum": {
+        "schema": "d0a1b2af1705c1b8495b00145082ef7470384e62ac1c4d9b9cdbbe0476c28f8c",
+        "value": "0791fd0f1e206e0b4f0fe01ec3749dc87c5136437d1951b1ccd5dacfff68acc6"
+      },
+      "datatype": "mixed",
+      "hash_pattern": null,
+      "path": [
+        "short_time_trajectory_times"
+      ],
+      "type": "cell"
+    },
+    {
+      "path": [
+        "transformers"
+      ],
+      "type": "context"
+    },
+    {
+      "INPUT": "inp",
+      "RESULT": "result",
+      "SCHEMA": null,
+      "checksum": {
+        "code": "752d59952677a53c882f68e833b0b49ea41762f4d172e11d6aff9118735eb500",
+        "input": "f9ea86e108de2a2085920eff12494b251e3f8e0be0570ef4966815ac4e73e6af",
+        "input_buffer": "f9ea86e108de2a2085920eff12494b251e3f8e0be0570ef4966815ac4e73e6af",
+        "result": null,
+        "result_schema": "d0a1b2af1705c1b8495b00145082ef7470384e62ac1c4d9b9cdbbe0476c28f8c",
+        "schema": "d0a1b2af1705c1b8495b00145082ef7470384e62ac1c4d9b9cdbbe0476c28f8c"
+      },
+      "compiled": false,
+      "hash_pattern": {
+        "*": "#"
+      },
+      "language": "python",
+      "meta": {
+        "ncores": -1
+      },
+      "path": [
+        "transformers",
+        "inference_convergence"
+      ],
+      "pins": {
+        "alpha_grid": {
+          "celltype": "default"
+        },
+        "alpha_in": {
+          "celltype": "default"
+        },
+        "fbm": {
+          "celltype": "plain",
+          "subcelltype": "module"
+        },
+        "gaussian_processes": {
+          "celltype": "plain",
+          "subcelltype": "module"
+        },
+        "inference": {
+          "celltype": "plain",
+          "subcelltype": "module"
+        },
+        "n_traj_convergence": {
+          "celltype": "default"
+        },
+        "reproducible_random_numbers": {
+          "celltype": "plain",
+          "subcelltype": "module"
+        },
+        "trajectory_lengths": {
+          "celltype": "default"
+        }
+      },
+      "type": "transformer"
+    },
+    {
+      "INPUT": "inp",
+      "RESULT": "result",
+      "SCHEMA": null,
+      "checksum": {
+        "code": "f2d3baa229fd67b4237e51c263744d728ab73160408fddb83558bc3cac1812b5",
+        "input": "c31fee0b1367d740f4d8e7d06924823ec8f8d227a80d3110a9ecf90e8a998ad9",
+        "input_buffer": "c31fee0b1367d740f4d8e7d06924823ec8f8d227a80d3110a9ecf90e8a998ad9",
+        "result": null,
+        "result_schema": "d0a1b2af1705c1b8495b00145082ef7470384e62ac1c4d9b9cdbbe0476c28f8c",
+        "schema": "d0a1b2af1705c1b8495b00145082ef7470384e62ac1c4d9b9cdbbe0476c28f8c"
+      },
+      "compiled": false,
+      "hash_pattern": {
+        "*": "#"
+      },
+      "language": "python",
+      "meta": {
+        "ncores": -1
+      },
+      "path": [
+        "transformers",
+        "lipid_analysis_l_10"
+      ],
+      "pins": {
+        "fbm": {
+          "celltype": "plain",
+          "subcelltype": "module"
+        },
+        "inference": {
+          "celltype": "plain",
+          "subcelltype": "module"
+        },
+        "lipid_analysis_parameters": {
+          "celltype": "default"
+        },
+        "long_time_trajectory_positions": {
+          "celltype": "default"
+        },
+        "long_time_trajectory_times": {
+          "celltype": "default"
+        },
+        "short_time_trajectory_positions": {
+          "celltype": "default"
+        },
+        "short_time_trajectory_times": {
+          "celltype": "default"
+        }
+      },
+      "type": "transformer"
+    },
+    {
+      "INPUT": "inp",
+      "RESULT": "result",
+      "SCHEMA": null,
+      "checksum": {
+        "code": "f2d3baa229fd67b4237e51c263744d728ab73160408fddb83558bc3cac1812b5",
+        "input": "297f8a75d7b32d070438980249e3ebaa893cf9b6227a9ee4518e23a7e012abd8",
+        "input_buffer": "297f8a75d7b32d070438980249e3ebaa893cf9b6227a9ee4518e23a7e012abd8",
+        "result": null,
+        "result_schema": "d0a1b2af1705c1b8495b00145082ef7470384e62ac1c4d9b9cdbbe0476c28f8c",
+        "schema": "d0a1b2af1705c1b8495b00145082ef7470384e62ac1c4d9b9cdbbe0476c28f8c"
+      },
+      "compiled": false,
+      "hash_pattern": {
+        "*": "#"
+      },
+      "language": "python",
+      "meta": {
+        "ncores": -1
+      },
+      "path": [
+        "transformers",
+        "lipid_analysis_l_50"
+      ],
+      "pins": {
+        "fbm": {
+          "celltype": "plain",
+          "subcelltype": "module"
+        },
+        "inference": {
+          "celltype": "plain",
+          "subcelltype": "module"
+        },
+        "lipid_analysis_parameters": {
+          "celltype": "default"
+        },
+        "long_time_trajectory_positions": {
+          "celltype": "default"
+        },
+        "long_time_trajectory_times": {
+          "celltype": "default"
+        },
+        "short_time_trajectory_positions": {
+          "celltype": "default"
+        },
+        "short_time_trajectory_times": {
+          "celltype": "default"
+        }
+      },
+      "type": "transformer"
+    },
+    {
+      "INPUT": "inp",
+      "RESULT": "result",
+      "SCHEMA": null,
+      "checksum": {
+        "code": "43890253f55d6820eb4ceb1eeead247878e2903800f3ce4cee15145241e88553",
+        "input": "20cebd2462ad4ded5c4d2a070d00e57ffe994f3e9331a8368b110cb236cf44a2",
+        "input_buffer": "20cebd2462ad4ded5c4d2a070d00e57ffe994f3e9331a8368b110cb236cf44a2",
+        "result": null,
+        "result_schema": "d0a1b2af1705c1b8495b00145082ef7470384e62ac1c4d9b9cdbbe0476c28f8c",
+        "schema": "d0a1b2af1705c1b8495b00145082ef7470384e62ac1c4d9b9cdbbe0476c28f8c"
+      },
+      "compiled": false,
+      "hash_pattern": {
+        "*": "#"
+      },
+      "language": "python",
+      "path": [
+        "transformers",
+        "make_alphagrid"
+      ],
+      "pins": {
+        "alpha_in": {
+          "celltype": "default"
+        },
+        "inference": {
+          "celltype": "plain",
+          "subcelltype": "module"
+        }
+      },
+      "type": "transformer"
+    },
+    {
+      "INPUT": "inp",
+      "RESULT": "result",
+      "SCHEMA": null,
+      "checksum": {
+        "code": "47b40e8ebf094bc6aabc0fce390748b70e06c8bdd83823ef3557886a3507733e",
+        "input": "9ce518623718b0cb4f6a616a1b3b996856e5dfad7ea371d9a805b8451492e585",
+        "input_buffer": "9ce518623718b0cb4f6a616a1b3b996856e5dfad7ea371d9a805b8451492e585",
+        "result": null,
+        "result_schema": "d0a1b2af1705c1b8495b00145082ef7470384e62ac1c4d9b9cdbbe0476c28f8c",
+        "schema": "d0a1b2af1705c1b8495b00145082ef7470384e62ac1c4d9b9cdbbe0476c28f8c"
+      },
+      "compiled": false,
+      "hash_pattern": {
+        "*": "#"
+      },
+      "language": "python",
+      "meta": {
+        "ncores": -1
+      },
+      "path": [
+        "transformers",
+        "short_time_modification"
+      ],
+      "pins": {
+        "alpha_grid": {
+          "celltype": "default"
+        },
+        "alpha_in": {
+          "celltype": "default"
+        },
+        "fbm": {
+          "celltype": "plain",
+          "subcelltype": "module"
+        },
+        "gaussian_processes": {
+          "celltype": "plain",
+          "subcelltype": "module"
+        },
+        "inference": {
+          "celltype": "plain",
+          "subcelltype": "module"
+        },
+        "n_traj_convergence": {
+          "celltype": "default"
+        },
+        "n_traj_ml_estimate": {
+          "celltype": "default"
+        },
+        "reproducible_random_numbers": {
+          "celltype": "plain",
+          "subcelltype": "module"
+        },
+        "trajectory_lengths": {
+          "celltype": "default"
+        }
+      },
+      "type": "transformer"
+    }
+  ],
+  "params": {
+    "share_namespace": "ctx"
+  }
+}
