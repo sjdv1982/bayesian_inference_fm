@@ -89,7 +89,7 @@ At the end of the script, the IPython shell will start where the workflow can be
 In principle, instead of running the workflow as it is being built and then saving the graph, the workflow could also be saved as a graph of computations-to-run. (Seamless does not make any fundamental difference, it is just that the checksums of the result cells would be missing.) Commenting out the designated `ctx.compute(...)` expressions will achieve this. This is not done by default, because as of Seamless 0.10, meta-info regarding CPU core usage is not being taken into account. In other words, loading an unfinished graph will instantly run all computations in parallel (since there are few internal dependencies in this workflow), which will flood a local computer unless Seamless job delegation has been set up.
 
 This applies to interactive modifications in `parameters.yaml`. Seamless will re-launch 
-all effected dependencies in parallel. Therefore, be very careful what you modify!
+all effected dependencies in parallel. Therefore, be very careful what you modify! Alternatively, you can force Seamless to execute only one transformer at a time by setting `seamless.set_ncores(1)` at the top of the script. This may no longer be necessary in future  Seamless versions.
 
 ## Optional: build the database archive from the database contents
 
@@ -105,18 +105,26 @@ docker rm seamless-database-container
 
 The Seamless workflow is self-contained in `bayesian_inference_fbm.seamless`. With the checksum buffers (and computation results) provided by the database, the workflow can be re-loaded as follows:
 
-`seamless-serve-graph-interactive bayesian_inference_fbm.seamless --database --mounts`
+```bash
+seamless-serve-graph-interactive bayesian_inference_fbm.seamless \
+    --database --mounts \
+    --ncores 1
+```
 
-As before, you can modify the graph interactively, either from IPython, or from the mounted files.
-As before, be very careful what you modify: all dependencies are launched in parallel.
+As before, you can modify the graph interactively, either from IPython, or from the mounted files. all dependencies are launched in parallel. 
 
-### Adding a status graph
+You can force Seamless to execute only one transformer at a time by specifying `--ncores 1`. This may no longer be necessary in future Seamless versions.
+
+### Adding a status visualization graph
 
 ```bash
-seamless-serve-graph-interactive bayesian_inference_fbm.seamless --database --mounts \
-      --status-graph /home/jovyan/software/seamless/graphs/status-visualization.seamless \
-      --add-zip /home/jovyan/software/seamless/graphs/status-visualization.zip
-```      
+seamless-serve-graph-interactive bayesian_inference_fbm.seamless \
+    --database --mounts \
+    --status-graph /home/jovyan/software/seamless/graphs/status-visualization.seamless \
+    --add-zip /home/jovyan/software/seamless/graphs/status-visualization.zip \
+    --ncores 1
+``` 
+
 In that case, open http://localhost:5813/status/index.html
 
 
