@@ -104,11 +104,11 @@ def mod_sigma_i(alpha):
 # all elements.
 
 def mod_diff_p(l):
-    m = np.zeros((l, l), dtype=np.int)
+    m = np.zeros((l, l), dtype=int)
     m[0, 0] = -1
-    m[1:, 1:] = np.ones((l-1, l-1), dtype=np.int)
-    d = np.diag(np.ones((l,), dtype=np.int))
-    d1 = np.diag(np.ones((l-1,), dtype=np.int), k = 1)
+    m[1:, 1:] = np.ones((l-1, l-1), dtype=int)
+    d = np.diag(np.ones((l,), dtype=int))
+    d1 = np.diag(np.ones((l-1,), dtype=int), k = 1)
     return m + d + d1 + d1.T
 
 def mod_sigma_p(alpha):

@@ -20,8 +20,8 @@ def sigma_i_to_sigma_p(m):
 
 def sigma_p_to_sigma_i(m):
     l = m.shape[0]
-    m = np.vstack([np.zeros((1, l+1), np.int),
-                   np.hstack([np.zeros((l, 1), np.int), m])])
+    m = np.vstack([np.zeros((1, l+1), int),
+                   np.hstack([np.zeros((l, 1), int), m])])
     m = m[1:, :] - m[:-1, :]
     m = m[:, 1:] - m[:, :-1]
     return m
