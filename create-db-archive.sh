@@ -10,6 +10,7 @@ for i in `cat ${checksum_file}`; do
   rm -f TEMP/seamless-db/buffers/$i
 done
 cd TEMP
+rm -f *.yaml
 tar czf TEMP.tgz seamless-db/
 cd ..
 mv -f TEMP/TEMP.tgz $outfile
